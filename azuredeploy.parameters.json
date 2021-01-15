@@ -33,7 +33,7 @@
             "value": "DMZ-sn"
         },
         "azBastionSubnetAddressRange": {
-            "value": "10.0.2.0/24"
+            "value": "10.0.2.0/27"
         },
         "AzBastionSubnetName": {
             "value": "AzBastion-sn"
