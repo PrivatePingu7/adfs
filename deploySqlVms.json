@@ -48,10 +48,10 @@
             "type": "string"
         },
         "sqlVm1": {
-            "type" : "string"
+            "type": "string"
         },
         "sqlVm2": {
-            "type" : "string"
+            "type": "string"
         }
     },
     "variables": {
@@ -105,20 +105,16 @@
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     },
-                    "copy": [
+                    "dataDisks": [
                         {
-                            "name": "dataDisks",
-                            "count": "[add(parameters('sqlDataDisksCount'), parameters('sqlLogDisksCount'))]",
-                            "input": {
-                                "lun": "[copyIndex('dataDisks')]",
-                                "createOption": "[variables('dataDisks').createOption]",
-                                "caching": "[if(greaterOrEquals(copyIndex('dataDisks'), parameters('sqlDataDisksCount')) ,'None', variables('dataDisks').caching )]",
-                                "writeAcceleratorEnabled": "[variables('dataDisks').writeAcceleratorEnabled]",
-                                "diskSizeGB": "[variables('dataDisks').diskSizeGB]",
-                                "managedDisk": {
-                                    "storageAccountType": "[variables('dataDisks').storageAccountType]"
-                                }
-                            }
+                            "name": "[concat(parameters('vmNamePrefix'),copyIndex(1),'-datadisk')]",
+                            "vhd": {
+                                "uri": "[concat('http://',parameters('storageAccountNamePrefix'),copyIndex(1),'.blob.core.windows.net/vhds/', parameters('vmNamePrefix'),copyIndex(1),'-datadisk.vhd')]"
+                            },
+                            "caching": "None",
+                            "createOption": "empty",
+                            "diskSizeGB": 127,
+                            "lun": 0
                         }
                     ]
                 },
