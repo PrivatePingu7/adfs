@@ -68,6 +68,48 @@
       }
     },
     {
+      "comments": "SQL01 NIC",
+      "name": "[parameters('nicNames')[6]]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "location": "[parameters('location')]",
+      "apiVersion": "2020-05-01",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAllocationMethod": "Static",
+              "privateIPAddress": "[parameters('ipAddresses')[6]]",
+              "subnet": {
+                "id": "[parameters('subnetIds')[0]]"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "comments": "SQL02 NIC",
+      "name": "[parameters('nicNames')[7]]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "location": "[parameters('location')]",
+      "apiVersion": "2020-05-01",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAllocationMethod": "Static",
+              "privateIPAddress": "[parameters('ipAddresses')[7]]",
+              "subnet": {
+                "id": "[parameters('subnetIds')[0]]"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
       "comments": "ADFS01 NIC",
       "name": "[parameters('nicNames')[2]]",
       "type": "Microsoft.Network/networkInterfaces",
