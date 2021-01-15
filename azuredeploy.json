@@ -81,21 +81,7 @@
       },
       "defaultValue": "10.0.1.0/24"
     },   
-    /* 
-    "azBastionSubnetName": {
-      "type": "string",
-      "metadata": {
-        "description": "The name of the internal subnet, mandatory on both virtual network usage options (new or existing)."
-      },
-      "defaultValue": "AzBastion-sn"
-    },
-    "azBastionSubnetAddressRange": {
-      "type": "string",
-      "metadata": {
-        "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
-      },
-      "defaultValue": "10.0.7.0/27"
-    },  */  
+    
     "addc01NicIPAddress": {
       "type": "string",
       "metadata": {
@@ -337,17 +323,7 @@
           }
         }
       }
-      /*
-      {
-        "name": "[parameters('azBastionSubnetName')]",
-        "properties": {
-          "addressPrefix": "[parameters('azBastionSubnetAddressRange')]",
-          "networkSecurityGroup": {
-            "id": "[resourceId('Microsoft.Network/networkSecurityGroups','AzBastion-sn-nsg')]"
-          }
-        }
-      }
-      */
+      
     ],
     "deployLoadBalancersUrl": "[concat(variables('baseUrl'),'/deployLoadBalancers.json')]",
     "loadBalancerNames": [
