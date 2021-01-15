@@ -134,6 +134,10 @@
         {
             "type": "Microsoft.SqlVirtualMachine/SqlVirtualMachines",
             "apiVersion": "2017-03-01-preview",
+            "copy": {
+                "name": "addcCopy",
+                "count": "[parameters('vmCount')]"
+            },
             "name": "[concat(parameters('vmNamePrefix'),copyIndex(1), '-sql')]",
             "location": "[parameters('location')]",
             "dependsOn": [
