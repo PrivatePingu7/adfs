@@ -137,7 +137,7 @@
             "name": "[concat(parameters('vmNamePrefix'),copyIndex(1), '-sql')]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', concat(parameters('vmNamePrefix'),copyIndex(1)))]"
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters(concat(parameters('vmNamePrefix'),copyIndex(1))))]"
             ],
             "properties": {
                 "virtualMachineResourceId": "[resourceId('Microsoft.Compute/virtualMachines', concat(parameters('vmNamePrefix'),copyIndex(1)))]",
