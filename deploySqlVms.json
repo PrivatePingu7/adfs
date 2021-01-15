@@ -138,7 +138,7 @@
                 "name": "addcCopy",
                 "count": "[parameters('vmCount')]"
             },
-            "name": "[concat(parameters('vmNamePrefix'),copyIndex(1), '-sql')]",
+            "name": "[concat(parameters('vmNamePrefix'),copyIndex(1))]",
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Compute/virtualMachines', parameters(concat(parameters('vmNamePrefix'),copyIndex(1))))]"
