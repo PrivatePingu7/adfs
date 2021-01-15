@@ -67,13 +67,6 @@
       },
       "defaultValue": "10.0.0.0/24"
     },
-    "dmzSubnetAddressRange": {
-      "type": "string",
-      "metadata": {
-        "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
-      },
-      "defaultValue": "10.0.1.0/24"
-    },
     "dmzSubnetName": {
       "type": "string",
       "metadata": {
@@ -81,13 +74,13 @@
       },
       "defaultValue": "DMZ-sn"
     },
-    "azBastionSubnetAddressRange": {
+    "dmzSubnetAddressRange": {
       "type": "string",
       "metadata": {
         "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
       },
-      "defaultValue": "10.0.7.0/27"
-    },
+      "defaultValue": "10.0.1.0/24"
+    },    
     "azBastionSubnetName": {
       "type": "string",
       "metadata": {
@@ -95,6 +88,13 @@
       },
       "defaultValue": "AzBastion-sn"
     },
+    "azBastionSubnetAddressRange": {
+      "type": "string",
+      "metadata": {
+        "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
+      },
+      "defaultValue": "10.0.7.0/27"
+    },    
     "addc01NicIPAddress": {
       "type": "string",
       "metadata": {

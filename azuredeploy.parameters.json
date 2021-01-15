@@ -26,18 +26,18 @@
         "internalSubnetAddressRange": {
             "value": "10.0.0.0/24"
         },
-        "dmzSubnetAddressRange": {
-            "value": "10.0.1.0/24"
-        },
         "dmzSubnetName": {
             "value": "DMZ-sn"
         },
-        "azBastionSubnetAddressRange": {
-            "value": "10.0.2.0/27"
-        },
+        "dmzSubnetAddressRange": {
+            "value": "10.0.1.0/24"
+        },        
         "AzBastionSubnetName": {
             "value": "AzBastion-sn"
         },
+        "azBastionSubnetAddressRange": {
+            "value": "10.0.2.0/27"
+        },        
         "addc01NicIPAddress": {
             "value": "10.0.0.101"
         },
