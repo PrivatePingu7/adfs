@@ -777,6 +777,12 @@
           },
           "storageAccountNamePrefix": {
             "value": "[variables('storageAccountNamePrefix')]"
+          },
+          "sqlVm1": {
+            "value": "sql1"
+          },
+          "sqlVm2": {
+            "value": "sql2"
           }
         }
       }

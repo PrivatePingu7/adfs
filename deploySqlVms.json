@@ -46,6 +46,12 @@
         },
         "logPath": {
             "type": "string"
+        },
+        "sqlVm1": {
+            "type" : "string"
+        },
+        "sqlVm2": {
+            "type" : "string"
         }
     },
     "variables": {
@@ -141,7 +147,8 @@
             "name": "[concat(parameters('vmNamePrefix'),copyIndex(1))]",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', parameters(concat(parameters('vmNamePrefix'),copyIndex(1))))]"
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('sqlVm1'))]",
+                "[resourceId('Microsoft.Compute/virtualMachines', parameters('sqlVm2'))]"
             ],
             "properties": {
                 "virtualMachineResourceId": "[resourceId('Microsoft.Compute/virtualMachines', concat(parameters('vmNamePrefix'),copyIndex(1)))]",
