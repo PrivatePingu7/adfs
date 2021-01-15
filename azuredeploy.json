@@ -86,7 +86,7 @@
       "metadata": {
         "description": "The address range of the dmz subnet, which contains the Windows application proxy servers, mandatory if creating a new virtual network."
       },
-      "defaultValue": "10.0.2.0/27"
+      "defaultValue": "10.0.2.0/24"
     },
     "azBastionSubnetName": {
       "type": "string",
