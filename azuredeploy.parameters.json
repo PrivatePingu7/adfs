@@ -32,8 +32,12 @@
         "dmzSubnetName": {
             "value": "DMZ-sn"
         },
-        
-        
+        "azBastionSubnetAddressRange": {
+            "value": "10.0.2.0/2"
+        },
+        "AzBastionSubnetName": {
+            "value": "AzBastion-sn"
+        },
         "addc01NicIPAddress": {
             "value": "10.0.0.101"
         },
